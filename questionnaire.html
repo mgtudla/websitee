@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Strand Questionnaire</title>
+    <link rel="icon" href="https://i.postimg.cc/bJP9bMKx/292684662-103138982469160-470534268537139523-n.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.postimg.cc/vZ1hd5rV/abstract-futuristic-circuit-high-computer-technology-business-background-vector-illustration-innovat.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .flashcard-container {
+            width: 100%;
+            max-width: 700px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+        h1 {
+            color: #00796b;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .flashcard {
+            display: none;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .flashcard.active {
+            display: block;
+        }
+        .question label {
+            color: #00796b;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #00796b;
+            transform: scale(1.3);
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeInPopup 0.5s ease-out;
+        }
+        .popup-content {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .popup-content h2 {
+            color: #004d40;
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        .popup-content p {
+            color: #00796b;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .popup-content button {
+            width: auto;
+            padding: 12px 25px;
+            background-color: #00796b;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        .popup-content button:hover {
+            background-color: #004d40;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInPopup {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flashcard-container">
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/bJP9bMKx/292684662-103138982469160-470534268537139523-n.jpg" alt="Logo">
+        </div>
+        <h1>Self-Assessment</h1>
+        <form id="questionnaireForm">
+            <div id="questionCards">
+                <!-- Questions go here (same as your original HTML structure) -->
+                <div class="flashcard active" id="q1">
+                    <label>1. Are you still undecided about a specific career path?</label><br>
+                    <input type="radio" name="q1" value="A"> Yes
+                    <input type="radio" name="q1" value="B"> Maybe
+                    <input type="radio" name="q1" value="C"> No
+                </div>
+                <div class="flashcard" id="q2">
+                    <label>2. Do you see yourself working in industriess related to ICT, Culinary, or Industrial technology?</label><br>
+                    <input type="radio" name="q2" value="A"> Yes
+                    <input type="radio" name="q2" value="B"> Maybe
+                    <input type="radio" name="q2" value="C"> No
+                </div>
+                <div class="flashcard" id="q3">
+                    <label>3. Are you interested in science experiments or labs?</label><br>
+                    <input type="radio" name="q3" value="A"> Yes
+                    <input type="radio" name="q3" value="B"> Maybe
+                    <input type="radio" name="q3" value="C"> No
+                </div>
+                <div class="flashcard" id="q4">
+                    <label>4. Are you interested in learning about different cultures and societies?</label><br>
+                    <input type="radio" name="q4" value="A"> Yes
+                    <input type="radio" name="q4" value="B"> Maybe
+                    <input type="radio" name="q4" value="C"> No
+                </div>
+                <div class="flashcard" id="q5">
+                    <label>5. Are you interested in studying business and management?</label><br>
+                    <input type="radio" name="q5" value="A"> Yes
+                    <input type="radio" name="q5" value="B"> Maybe
+                    <input type="radio" name="q5" value="C"> No
+                </div>
+                <div class="flashcard" id="q6">
+                    <label>6. Do you find public speaking enjoyable?</label><br>
+                    <input type="radio" name="q6" value="A"> Yes
+                    <input type="radio" name="q6" value="B"> Maybe
+                    <input type="radio" name="q6" value="C"> No
+                </div>
+                <div class="flashcard" id="q7">
+                    <label>7. Do you like analyzing literature or historical texts?</label><br>
+                    <input type="radio" name="q7" value="A"> Yes
+                    <input type="radio" name="q7" value="B"> Maybe
+                    <input type="radio" name="q7" value="C"> No
+                </div>
+                <div class="flashcard" id="q8">
+                    <label>8. Do you prefer a broad mix of subjects instead of focusing on one field?</label><br>
+                    <input type="radio" name="q8" value="A"> Yes
+                    <input type="radio" name="q8" value="B"> Maybe
+                    <input type="radio" name="q8" value="C"> No
+                </div>
+                <div class="flashcard" id="q9">
+                    <label>9. Are you open to persuing technical certifications, such as TESDA?</label><br>
+                    <input type="radio" name="q9" value="A"> Yes
+                    <input type="radio" name="q9" value="B"> Maybe
+                    <input type="radio" name="q9" value="C"> No
+                </div>
+                <div class="flashcard" id="q10">
+                    <label>10. Do you enjoy working with numbers and solving?</label><br>
+                    <input type="radio" name="q10" value="A"> Yes
+                    <input type="radio" name="q10" value="B"> Maybe
+                    <input type="radio" name="q10" value="C"> No
+                </div>
+                <div class="flashcard" id="q11">
+                    <label>11. Do you enjoy in engaging in debates or disscussions about current events? </label><br>
+                    <input type="radio" name="q11" value="A"> Yes
+                    <input type="radio" name="q11" value="B"> Maybe
+                    <input type="radio" name="q11" value="C"> No
+                </div>
+                <div class="flashcard" id="q12">
+                    <label>12. Would you like to acquire skills for employment immediately after highschool?</label><br>
+                    <input type="radio" name="q12" value="A"> Yes
+                    <input type="radio" name="q12" value="B"> Maybe
+                    <input type="radio" name="q12" value="C"> No
+                </div>
+                <div class="flashcard" id="q13">
+                    <label>13. Do you want a strand that allows you to prepare for various undergraduate programs or career paths? </label><br>
+                    <input type="radio" name="q13" value="A"> Yes
+                    <input type="radio" name="q13" value="B"> Maybe
+                    <input type="radio" name="q13" value="C"> No
+                </div>
+                <div class="flashcard" id="q14">
+                    <label>14. Do you enjoy working with tools and equipment?</label><br>
+                    <input type="radio" name="q14" value="A"> Yes
+                    <input type="radio" name="q14" value="B"> Maybe
+                    <input type="radio" name="q14" value="C"> No
+                </div>
+                <div class="flashcard" id="q15">
+                    <label>15. Do you find problem solving and critical thinking engaging? </label><br>
+                    <input type="radio" name="q15" value="A"> Yes
+                    <input type="radio" name="q15" value="B"> Maybe
+                    <input type="radio" name="q15" value="C"> No
+                </div>
+                <div class="flashcard" id="q16">
+                    <label>16. Are you intrigued by human behavior and psychology? </label><br>
+                    <input type="radio" name="q16" value="A"> Yes
+                    <input type="radio" name="q16" value="B"> Maybe
+                    <input type="radio" name="q16" value="C"> No
+                </div>
+                <div class="flashcard" id="q17">
+                    <label>17. Do you enjoy collaborating with others ingroup projects or team setting ?</label><br>
+                    <input type="radio" name="q17" value="A"> Yes
+                    <input type="radio" name="q17" value="B"> Maybe
+                    <input type="radio" name="q17" value="C"> No
+                </div>
+                <div class="flashcard" id="q18">
+                    <label>18. Are you interested in hands-on learning?</label><br>
+                    <input type="radio" name="q18" value="A"> Yes
+                    <input type="radio" name="q18" value="B"> Maybe
+                    <input type="radio" name="q18" value="C"> No
+                </div>
+                <div class="flashcard" id="q19">
+                    <label>19. DO you explore concepts like physics, biology,  or chemistry?</label><br>
+                    <input type="radio" name="q19" value="A"> Yes
+                    <input type="radio" name="q19" value="B"> Maybe
+                    <input type="radio" name="q19" value="C"> No
+                </div>
+                <div class="flashcard" id="q20">
+                    <label>20. Do you enjoy writing activities?</label><br>
+                    <input type="radio" name="q20" value="A"> Yes
+                    <input type="radio" name="q20" value="B"> Maybe
+                    <input type="radio" name="q20" value="C"> No
+                </div>
+                <div class="flashcard" id="q21">
+                    <label>21. Do you enjoy working on projects that involve critical thinking? </label><br>
+                    <input type="radio" name="q21" value="A"> Yes
+                    <input type="radio" name="q21" value="B"> Maybe
+                    <input type="radio" name="q21" value="C"> No
+                </div>
+                <div class="flashcard" id="q22">
+                    <label>22. Are you comfortable with challenging course work in math and science?</label><br>
+                    <input type="radio" name="q22" value="A"> Yes
+                    <input type="radio" name="q22" value="B"> Maybe
+                    <input type="radio" name="q22" value="C"> No
+                </div>
+                <div class="flashcard" id="q23">
+                    <label>23. Do you like having the flexibility to choose electives from different strands?</label><br>
+                    <input type="radio" name="q23" value="A"> Yes
+                    <input type="radio" name="q23" value="B"> Maybe
+                    <input type="radio" name="q23" value="C"> No
+                </div>
+                <div class="flashcard" id="q24">
+                    <label>24. Are you curious about how things work and enjoy engineering projects? </label><br>
+                    <input type="radio" name="q24" value="A"> Yes
+                    <input type="radio" name="q24" value="B"> Maybe
+                    <input type="radio" name="q24" value="C"> No
+                </div>
+                <div class="flashcard" id="q25">
+                    <label>25. Are you interested in learning about how businesses operate and grow?</label><br>
+                    <input type="radio" name="q25" value="A"> Yes
+                    <input type="radio" name="q25" value="B"> Maybe
+                    <input type="radio" name="q25" value="C"> No
+                </div>
+            </div>
+            <button type="button" onclick="nextQuestion()">Next Question</button>
+        </form>
+    </div>
+
+    <div id="resultPopup" class="popup">
+        <div class="popup-content">
+            <h2>Thank you for completing the questionnaire!</h2>
+            <p id="result"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+<script>
+    let currentQuestion = 1;
+
+    function nextQuestion() {
+        const currentFlashcard = document.getElementById(`q${currentQuestion}`);
+        const radios = currentFlashcard.querySelectorAll('input[type="radio"]');
+        let answered = false;
+
+        // Check if any radio button is selected
+        radios.forEach(radio => {
+            if (radio.checked) {
+                answered = true;
+            }
+        });
+
+        // If not answered, prompt user to answer
+        if (!answered) {
+            alert("Ops, Bawal yan sagutan mo muna hehe.");
+            return; // Prevent moving to next question
+        }
+
+        // Move to the next question
+        currentFlashcard.classList.remove("active");
+        currentQuestion++;
+        const nextFlashcard = document.getElementById(`q${currentQuestion}`);
+        if (nextFlashcard) {
+            nextFlashcard.classList.add("active");
+        } else {
+            processAnswers(); // Call the function to process answers once all questions are answered
+        }
+    }
+
+    function processAnswers() {
+        const form = document.getElementById('questionnaireForm');
+        const formData = new FormData(form);
+        let scores = {
+            ABM: 0,
+            GAS: 0,
+            HUMMS: 0,
+            STEM: 0,
+            TVL: 0
+        };
+
+        formData.forEach((value, key) => {
+            if (value === 'A') {
+                switch (key) {
+                    case 'q5': case 'q10': case 'q15': case 'q17': case 'q25':
+                        scores.ABM += 2; break;
+                    case 'q1': case 'q8': case 'q13': case 'q20': case 'q23':
+                        scores.GAS += 2; break;
+                    case 'q4': case 'q6': case 'q7': case 'q11': case 'q16':
+                        scores.HUMMS += 2; break;
+                    case 'q3': case 'q19': case 'q21': case 'q22': case 'q24':
+                        scores.STEM += 2; break;
+                    case 'q2': case 'q9': case 'q12': case 'q14': case 'q18':
+                        scores.TVL += 2; break;
+                }
+            } else if (value === 'B') {
+                switch (key) {
+                    case 'q5': case 'q10': case 'q15': case 'q17': case 'q25':
+                    case 'q1': case 'q8': case 'q13': case 'q20': case 'q23':
+                    case 'q4': case 'q6': case 'q7': case 'q11': case 'q16':
+                    case 'q3': case 'q19': case 'q21': case 'q22': case 'q24':
+                    case 'q2': case 'q9': case 'q12': case 'q14': case 'q18':
+                        scores.GAS += 1; break;
+                }
+            }
+        });
+
+        let highestScore = Math.max(scores.ABM, scores.GAS, scores.HUMMS, scores.STEM, scores.TVL);
+        let highestStrand = '';
+        let suggestion = '';
+        let percentage = (highestScore / 10) *100;
+
+        if (highestScore === scores.ABM) {
+            highestStrand = 'ABM';
+            suggestion = `Based on your answers, you are most suited for the Accountancy, Business, and Management (ABM) strand.`;
+        } else if (highestScore === scores.GAS) {
+            highestStrand = 'GAS';
+            suggestion = `Based on your answers, you are most suited for the General Academic Strand (GAS) strand.`;
+        } else if (highestScore === scores.HUMMS) {
+            highestStrand = 'HUMMS';
+            suggestion = `Based on your answers, you are most suited for the Humanities and Social Sciences (HUMSS) strand.`;
+        } else if (highestScore === scores.STEM) {
+            highestStrand = 'STEM';
+            suggestion = `Based on your answers, you are most suited for the Science, Technology, Engineering, and Mathematics (STEM) strand.`;
+        } else if (highestScore === scores.TVL) {
+            highestStrand = 'TVL';
+            suggestion = `Based on your answers, you are most suited for the Technical-Vocational-Livelihood (TVL) strand.`;
+        }
+
+        const resultText = `Your highest score is for the ${highestStrand} strand with ${percentage}% suitability. ${suggestion}`;
+        document.getElementById('result').innerText = resultText;
+        document.getElementById('resultPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('resultPopup').style.display = 'none';
+    }
+</script>
+
+
+</body>
+</html>

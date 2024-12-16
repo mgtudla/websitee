@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TALAVERA SENIOR HIGH SCHOOL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+   
+  <main>
+    
+    <section>
+      <h1>WELCOME TO TALAVERA SENIOR HIGH SCHOOL</h1>
+    </section>
+    <section>
+      <div class="input_group">
+        <label for="q1">1. Are you open to broad studies?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="MAYBE">MAYBE</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q2">2. Are you considering a vocational career?</label>
+        <select id="q2" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="MAYBE">MAYBE</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q3">3. Are you excited about engineering projects?</label>
+        <select id="q3" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="MAYBE">MAYBE</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q4">4. Do you find cultural studies interesting?</label>
+        <select id="q4" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="It’s okay">It’s okay</option>
+          <option value="Not at all">Not at all</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q5">5. Do you find budgeting enjoyable?</label>
+        <select id="q5" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="It’s okay">It’s okay</option>
+          <option value="Not at all">Not at all</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q6">6. Do you like studying history?</label>
+        <select id="q6" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="Occasionally">Occasionally</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q7">7. Do you enjoy analyzing texts?</label>
+        <select id="q7" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q8">8. Do you find multiple topics interesting?</label>
+        <select id="q8" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="It’s okay">It’s okay</option>
+          <option value="Not at all">Not at all</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q9">9. Do you like hands-on work?</label>
+        <select id="q9" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q10">10. Do you enjoy working with numbers?</label>
+        <select id="q10" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="input_group">
+        <label for="q11">11. Are you interested in human sciences?</label>
+        <select id="q11" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="YES">YES</option>
+          <option value="MAYBE">MAYBE</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+
+      <div class="input_group">
+         
+            
+        <label for="q1">12. Do you find vocational training interesting?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">It’s okay</option>
+          <option value="option3">Not at all</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">13. Are you interested in different fields?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">A little</option>
+          <option value="option3">Not really
+          </option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">14. Are you interested in technical skills?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">A little</option>
+          <option value="option3">Not really</option>
+        </select>
+      </div>
+      
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">15.Do you like organizing tasks?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Occasionally</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">16. Are you excited about philosophy?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Maybe</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">17. Are you interested in business topics?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">A little</option>
+          <option value="option3"> Not really</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">18. Do you enjoy practical problem-solving??</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Occasionally</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">19.Do you enjoy math problems?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Sometimes</option>
+          <option value="option3"> No</option>
+        </select>
+      </div>
+      
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">20. Do you enjoy various subjects?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Sometimes</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">21.Are you interested in science </label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">A little</option>
+          <option value="option3">Not really
+          </option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">22. Do you like working with technology?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Occasionally</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">23. Do you like diverse tasks?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Occasionally</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">24. Do you find scientific theories engaging?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">It’s okay</option>
+          <option value="option3">Not at all</option>
+        </select>
+      </div>
+      
+      <div class="input_group">
+               
+                  
+        <label for="q1">25. Are you considering a career in finance or business?</label>
+        <select id="q1" class="dropdown">
+          <option value="">Select an option</option>
+          <option value="option1">YES</option>
+          <option value="option2">Maybe</option>
+          <option value="option3">No</option>
+        </select>
+      </div>
+      
+    </div>
+   
+      <button onclick="computeStrandFit()">Compute Strand Fit</button>
+      <div id="strandFit"><div class="button_group" id="login_button">
+        
+    </div></div>
+    </section>
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="HUMMS.html">HUMMS</a>
+                <a href="About us.html">TVL</a>
+                <a href="Products.html">STEM</a>
+                <a href="Funeral.html">ABM</a>
+                <a href="Contact.html">GAS</a>
+            </div>
+
+
+            
+
+    </section>
+  </main>
+  <script src="feedback.js"></script>
+</body>
+</html>

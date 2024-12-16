@@ -1,0 +1,11 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url(a90bd1bc-f74c-4800-abe0-f175c9860f08.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+  
